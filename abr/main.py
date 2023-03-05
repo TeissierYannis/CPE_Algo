@@ -451,11 +451,11 @@ class TestPerf(unittest.TestCase):
         end = time.time()
         height = tree.height_tree()
         # Print the results
-        print("--------- Insertion  -----------")
+        print("--------- Insertion.png  -----------")
         print("Time to insert 5000 values in the tree: {}s".format(end - start))
         print("Height of the tree: {}".format(height))
         print("-------------------------------")
-        # Search for 100 random values between 0 and 10000, measure the time
+        # Search.png for 100 random values between 0 and 10000, measure the time
         start = time.time()
         visited = {}
         for i in range(100):
@@ -463,7 +463,7 @@ class TestPerf(unittest.TestCase):
             visited[i] = tree.get_visited()
         end = time.time()
         # Print the results
-        print("--------- Search  -----------")
+        print("--------- Search.png  -----------")
         print("Time to search 100 values in the tree: {}s".format(end - start))
         print("Average visited nodes: {}".format(sum(visited.values()) / len(visited)))
         print("-------------------------------")
@@ -490,7 +490,7 @@ class TestPerf(unittest.TestCase):
         while million_height.height_tree() < 100000:
             million_height.insert(random.randint(0, 1000000000000000))
 
-        # Search for 100 values in each tree, measure the time, and do a graph in fact of the time and the height
+        # Search.png for 100 values in each tree, measure the time, and do a graph in fact of the time and the height
         times = {
             10: 0,
             100: 0,
@@ -520,7 +520,7 @@ class TestPerf(unittest.TestCase):
             t2 = time.time()
             times[100000] += t2 - t1
         # Print the results
-        print("--------- Search  -----------")
+        print("--------- Search.png  -----------")
         print("Average time to search 100 values in the tree with height of 10: {}s".format(times[10] / 100))
         print("Average time to search 100 values in the tree with height of 100: {}s".format(times[100] / 100))
         print("Average time to search 100 values in the tree with height of 1000: {}s".format(times[1000] / 100))
